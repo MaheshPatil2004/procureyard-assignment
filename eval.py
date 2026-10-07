@@ -40,7 +40,7 @@ def run_evals(service_url):
                     print(f"Connection Failed: {e}")
                 
                 # Slow down the loop to avoid hitting API rate limits
-                time.sleep(4) 
+                time.sleep(8) 
                 
             elif turn.get("from") == "agent":
                 print(f"Agent (Expected): {turn.get('example')}\n")

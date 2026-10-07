@@ -62,7 +62,11 @@ python eval.py http://127.0.0.1:8000
 
 3. **GET `/ops/pending`**: Returns a JSON list of all payout discrepancies awaiting manual operations approval.
 
-4. **GET `/ops`**: Serves an interactive HTML dashboard for operations staff to review and resolve pending approvals.
+4. **GET `/ops`**: Serves an interactive HTML dashboard for operations staff to review and resolve pending approvals.Open 
+```
+http://127.0.0.1:8000/ops
+```
+ and you cancheck that the approvals table.
 
 ## Assumptions Made
 
@@ -82,6 +86,4 @@ The evaluation script uses a controlled 4-second delay between requests to remai
 
 The agent successfully processes evaluation test cases, enforces strict security boundaries against adversarial prompt injections, accurately calculates payout disparities using database state, and formats outputs into natural Hinglish responses.
 
-## What Was Skipped
 
-A separate, standalone frontend build (e.g., React/Next.js) was skipped in favor of embedding a clean, server-rendered Tailwind/HTML Ops Dashboard directly into FastAPI at `/ops`.
